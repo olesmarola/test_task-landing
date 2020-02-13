@@ -1,0 +1,23 @@
+{
+  "name": "test_task-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olesmarola/test_task-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olesmarola/test_task-landing/issues"
+  },
+  "homepage": "https://github.com/olesmarola/test_task-landing",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
