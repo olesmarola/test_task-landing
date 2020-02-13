@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Light.woff2') format('woff2'),
+  url('../fonts/MyriadPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+  url('../fonts/MyriadPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: Myriad Pro, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.cards__section {
+  margin: 0 auto 115px;
+  width: max-content;
+}
+
+.section__slash {
+  font-size: 36px;
+  color: #1a90a2;
+  margin-right: 18px;
+}
+
+.section__title {
+  font-size: 36px;
+  margin: 0;
+}
+
+.cards__container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 280px);
+  gap: 60px 14px;
+  padding: 50px 0;
+  max-width: 1180px;
+}
+
+.card {
+  position: relative;
+  box-shadow: inset 0 -200px 90px -92px rgba(0, 0, 0, 0.2);
+  width: 280px;
+  height: 390px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: border 300ms, box-shadow 300ms;
+}
+
+.card--big {
+  width: 580px;
+}
+
+.card:hover {
+  box-shadow: inset 0 -200px 90px -92px rgba(26, 144, 162, 1);
+  border: 2px solid #1a90a2;
+}
+
+.card__img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card__img--big {
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.card__text {
+  position: absolute;
+  bottom: -20px;
+  right: 50%;
+  transform: translate(50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.card__title {
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+
+.card__price {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.card__button {
+  box-sizing: border-box;
+  width: 120px;
+  height: 40px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a90a2;
+  border: 1px solid #1a90a2;
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms, transform 100ms;
+}
+
+.card__button:hover {
+  color: #1a90a2;
+  background-color: #fff;
+}
+
+.card__button:active {
+  transform: scale(0.9);
+}
+
+@media (max-width: 1200px) {
+  .cards__container {
+    grid-template-columns: repeat(2, 280px);
+  }
+
+  .cards__section {
+    margin: 0 auto 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards__container {
+    grid-template-columns: 280px;
+  }
+
+  .card--big {
+    width: 280px;
+  }
+}
+
+@media (max-width: 400px) {
+  .section__title {
+    font-size: 24px;
+  }
+
+  .section__slash {
+    font-size: 24px;
+  }
+}
